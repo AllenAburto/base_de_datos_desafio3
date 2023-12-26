@@ -10,7 +10,7 @@ function Buscador({ onBuscar }) {
   useEffect(() => {
     const delayDebounceFn = setTimeout(() => {
       onBuscar(term);
-    }, 300); // Agregar un pequeño retraso para mejorar la eficiencia
+    }, 300);
     return () => clearTimeout(delayDebounceFn);
   }, [term, onBuscar]);
 
